@@ -13,12 +13,13 @@ a {
 	text-decoration: none;
 }
 .container {
-	min-height: 70vh;
+	min-height: 100vh;
 	width: 100%;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 }
+
 img {
 	height: 100%;
 	width: 100%;
@@ -32,6 +33,21 @@ p {
 	font-weight: 300;
 	letter-spacing: .05rem;
 }
+
+
+.sectionDesc {
+	font-size: 2rem;
+	font-weight: 300;
+	color: black;
+	/* margin-top: 10px; */
+	/* text-transform: uppercase; */
+	letter-spacing: .2rem;
+	width: 70%;
+	margin: 40px auto;
+	text-align: center;
+
+}
+
 .section-title {
 	font-size: 4rem;
 	font-weight: 300;
@@ -66,6 +82,7 @@ p {
 	font-size: 3rem;
 	text-transform: uppercase;
 	color: white;
+	text-align: center;
 }
 .brand h1 span {
 	color: crimson;
@@ -267,44 +284,72 @@ p {
 /* contact Section */
 #contact .contact {
 	flex-direction: column;
-	max-width: 1200px;
+	max-width: 75%;
 	margin: 0 auto;
 }
-#contact .contact-items {
-	width: 400px;
-}
-#contact .contact-item {
-	width: 80%;
-	padding: 20px;
-	text-align: center;
-	border-radius: 10px;
-	padding: 30px;
-	margin: 30px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-direction: column;
-	box-shadow: 0px 0px 18px 0 #0000002c;
-	transition: .3s ease box-shadow;
-}
-#contact .contact-item:hover {
-	box-shadow: 0px 0px 5px 0 #0000002c;
-}
-#contact .icon {
-	width: 70px;
-	margin: 0 auto;
-	margin-bottom: 10px;
-}
-#contact .contact-info h1 {
-	font-size: 2.5rem;
-	font-weight: 500;
-	margin-bottom: 5px;
-}
-#contact .contact-info h2 {
-	font-size: 1.3rem;
-	line-height: 2rem;
-	font-weight: 500;
-}
+
+
+/* --------------------------------------------CW----------------------------------------------- */
+/* Style inputs with type="text", select elements and textareas */
+
+
+input[type=text], select, textarea {
+	width: 100%; /* Full width */
+	padding: 12px; /* Some padding */ 
+	border: 1px solid #ccc; /* Gray border */
+	border-radius: 4px; /* Rounded borders */
+	box-sizing: border-box; /* Make sure that padding and width stays in place */
+	margin-top: 6px; /* Add a top margin */
+	margin-bottom: 16px; /* Bottom margin */
+	resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+  }
+
+  input[type=date] {
+	width: 25%; /* Full width */
+	min-width: 200px;
+	padding: 12px; /* Some padding */ 
+	border: 1px solid #ccc; /* Gray border */
+	border-radius: 4px; /* Rounded borders */
+	box-sizing: border-box; /* Make sure that padding and width stays in place */
+	margin-top: 6px; /* Add a top margin */
+	margin-bottom: 16px; /* Bottom margin */
+	resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+  }
+
+  input[type=time] {
+	width: 25%; /* Full width */
+	min-width: 200px;
+	padding: 12px; /* Some padding */ 
+	border: 1px solid #ccc; /* Gray border */
+	border-radius: 4px; /* Rounded borders */
+	box-sizing: border-box; /* Make sure that padding and width stays in place */
+	margin-top: 6px; /* Add a top margin */
+	margin-bottom: 16px; /* Bottom margin */
+	resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+  }
+  
+  /* Style the submit button with a specific background color etc */
+  input[type=submit] {
+	background-color: #4CAF50;
+	color: white;
+	padding: 12px 20px;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+  }
+  
+  /* When moving the mouse over the submit button, add a darker green color */
+  input[type=submit]:hover {
+	background-color: #45a049;
+  }
+  
+  /* Add a background color and some padding around the form */
+  /* .container { */
+	/* border-radius: 5px; */
+	/* background-color: #f2f2f2; */
+	/* padding: 20px; */
+  /* } */
+/* --------------------------------------------CW----------------------------------------------- */
 /*End contact Section */
 
 /* Footer */
@@ -347,6 +392,68 @@ p {
 }
 /* End Footer */
 
+
+
+/* Media Query For Tablet */
+@media only screen and (min-width: 768px) {
+	.cta {
+		font-size: 2.5rem;
+		padding: 20px 60px;
+	}
+	h1.section-title {
+		font-size: 6rem;
+	}
+
+	/* Hero */
+	#hero h1 {
+		font-size: 7rem;
+	}
+	/* End Hero */
+
+	
+
+	/* contact  */
+	#contact .contact {
+		flex-direction: column;
+		padding: 30px 0;
+		align-items: center;
+		justify-content: center;
+		min-width: 20vh;
+	}
+	
+	/* End contact  */
+}
+/* End Media Query For Tablet */
+
+/* Media Query For Desktop */
+@media only screen and (min-width: 1200px) {
+	/* header */
+	#header .hamburger {
+		display: none;
+	}
+	#header .nav-list ul {
+		position: initial;
+		display: block;
+		height: auto;
+		width: fit-content;
+		background-color: transparent;
+	}
+	#header .nav-list ul li {
+		display: inline-block;
+	}
+	#header .nav-list ul li a {
+		font-size: 1.8rem;
+	}
+	#header .nav-list ul a:after {
+		display: none;
+	}
+	/* End header */
+
+}
+/* End  Media Query For Desktop */
+
+
+
 /* Keyframes */
 @keyframes hamburger_puls {
 	0% {
@@ -380,84 +487,3 @@ p {
 	}
 }
 /* End Keyframes */
-
-/* Media Query For Tablet */
-@media only screen and (min-width: 768px) {
-	.cta {
-		font-size: 2.5rem;
-		padding: 20px 60px;
-	}
-	h1.section-title {
-		font-size: 6rem;
-	}
-
-	/* Hero */
-	#hero h1 {
-		font-size: 7rem;
-	}
-	/* End Hero */
-
-	
-
-	/* contact  */
-	#contact .contact {
-		flex-direction: column;
-		padding: 100px 0;
-		align-items: center;
-		justify-content: center;
-		min-width: 20vh;
-	}
-	#contact .contact-items {
-		width: 100%;
-		display: flex;
-		flex-direction: row;
-		justify-content: space-evenly;
-		margin: 0;
-	}
-	#contact .contact-item {
-		width: 30%;
-		margin: 0;
-		flex-direction: row;
-	}
-	#contact .contact-item .icon {
-		height: 100px;
-		width: 100px;
-	}
-	#contact .contact-item .icon img {
-		object-fit: contain;
-	}
-	#contact .contact-item .contact-info {
-		width: 100%;
-		text-align: left;
-		padding-left: 20px;
-	}
-	/* End contact  */
-}
-/* End Media Query For Tablet */
-
-/* Media Query For Desktop */
-@media only screen and (min-width: 1200px) {
-	/* header */
-	#header .hamburger {
-		display: none;
-	}
-	#header .nav-list ul {
-		position: initial;
-		display: block;
-		height: auto;
-		width: fit-content;
-		background-color: transparent;
-	}
-	#header .nav-list ul li {
-		display: inline-block;
-	}
-	#header .nav-list ul li a {
-		font-size: 1.8rem;
-	}
-	#header .nav-list ul a:after {
-		display: none;
-	}
-	/* End header */
-
-}
-/* End  Media Query For Desktop */

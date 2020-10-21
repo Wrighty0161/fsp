@@ -43,34 +43,75 @@
   
   <!-- Contact Section -->
   <section id="contact">
-    <div class="contact container">
-      <!-- <div><h1 class="brand">Thank you for deciding to tell us about suspicious activity in your area. We know it can be a difficult decision to speak out so it’s great that you have taken the first step. </h1></div> -->
+
+    <Div class="paraText">
+      <h2 class="sectionDesc">
+        Thank you for deciding to tell us about suspicious activity in your area. We know it can be a difficult decision to speak out so it’s great that you have taken the first step. 
+
+        We want to make sure that you are in the right place before you start to give us the details about the crime.
+
+      </h2>
+
+
+    </Div>
+
+
+    <div class="contact">
       <div><h1 class="section-title">Contact <span>Form</span></h1></div>
-      <!-- <div class="contact-items">
-        <div class="contact-item">
-          <div class="icon"><img src="https://img.icons8.com/bubbles/100/000000/phone.png"/></div>
-          <div class="contact-info">
-            <h1>Phone</h1>
-            <h2>0161 123 4567</h2>
-            <h2>0161 123 4567</h2>
-          </div>
+
+  
+        <!-- <form action="action_page.php"> -->
+        <form class="form-inline">
+        <div class="form-group row">
+          <label for="confirmation">I confirm that this form is not being used to report something that requires urgent police action.</label>
+          <input type="text" id="confirmation" name="confirmation">
         </div>
-        <div class="contact-item">
-          <div class="icon"><img src="https://img.icons8.com/bubbles/100/000000/new-post.png"/></div>
-          <div class="contact-info">
-            <h1>Email</h1>
-            <h2>test@gmail.com</h2>
-            <h2>abcd@gmail.com</h2>
-          </div>
+
+
+        <div class="form-group row">
+          <label for="location">Where did the crime or incident take place?</label>
+          <input type="text" id="location" name="location">
         </div>
-        <div class="contact-item">
-          <div class="icon"><img src="https://img.icons8.com/bubbles/100/000000/map-marker.png"/></div>
-          <div class="contact-info">
-            <h1>Address</h1>
-            <h2>Failsworth, Manchester</h2>
+
+
+        <div class="form-group row">
+          <div class="frmLabel">
+            <label for="dateOf">What DATE did this happen?</label>
           </div>
+          <input type="date" id="dateOf" name="dateOf">
         </div>
-      </div> -->
+
+
+        <div class="form-group row">
+          <div class="frmLabel">
+            <label for="timeOf">What TIME did this happen? (A rough time is fine)</label>
+          </div>
+          <input type="time" id="timeOf" name="timeOf">
+        </div>
+
+
+        <div class="form-group row">
+          <label for="desc">Please explain in as much detail as possible what you have seen</label>
+          <textarea id="desc" name="desc" style="height:200px"></textarea>
+        </div>
+
+
+        <div class="form-group row">
+          <label for="docs">File input</label>
+          <div class="col-10">
+            <input type="file" class="form-control-file" id="docs" aria-describedby="fileHelp">
+          </div>
+          <!-- <small id="infoText" class="form-text text-muted">This is some placeholder block-level help text for the above input. It's a bit lighter and easily wraps to a new line.</small> -->
+        </div>
+
+
+          <input type="submit" value="Submit">
+      
+        </form>
+
+
+
+
     </div>
   </section>
   <!-- End Contact Section -->
@@ -90,5 +131,4 @@
   </section>
   <!-- End Footer -->
   <script src="./app.js"></script>
-</body>
 </html>
